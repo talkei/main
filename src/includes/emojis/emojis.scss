@@ -1,0 +1,67 @@
+.c-emojis {
+  width: 12em;
+  position: relative;
+
+
+  .trig {
+    font-size: 1.5em;
+    color: #0093d0;
+    cursor: pointer;
+  }
+
+  .emojis {
+    display: none;
+    background-color: #FFF;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid #0093d0;
+    position: absolute;
+    height: 8em;
+    top: -8.5em;
+    left: -1em;
+    z-index: 100;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, .2);
+    padding: .3em;
+
+    &.emojis--show {
+      display: block;
+    }
+  }
+
+  input {
+    position: absolute;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 1.3em 0 0;
+    padding: 0;
+    height: 8.5em;
+    overflow: auto;
+    width: 13em;
+  }
+
+  li {
+    font-family: 'Noto Sans', sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    width: 2.5em;
+    cursor: pointer;
+    color: #000;
+  }
+}
+
+.arr-fw {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+  border-top: 8px solid #0093d0;
+  position: absolute;
+  top: -0.45em;
+  left: .1em;
+}
