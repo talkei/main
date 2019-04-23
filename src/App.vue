@@ -5,7 +5,7 @@
         Envie uma saudação direto para nosso <em>grande</em> presidente.
       </h1>
       <h2>
-        Para exercer sua liberdade de expressão basta clicar em uma mensagem abaixo e o twitter abrirá automaticamente com a mensagem e o handler do presidente, <em>talkei</em>!?
+        Para exercer sua liberdade de expressão basta clicar em uma mensagem abaixo e o twitter abrirá automaticamente com a mensagem e o handler do presidente, <b>talkei</b>!?
       </h2>
       <span class="character" />
       <div class="sharethis-inline-share-buttons" />
@@ -122,9 +122,9 @@ export default {
 header {
   background:transparent url("assets/talkei-topo-bg.png");
   color: #3a3a3a;
-  padding-bottom: 50px;
   position: relative;
-  padding: 1em;
+  padding: 2em;
+  // padding-bottom: 3em;
   min-height: 55vh;
 
   @include small {
@@ -165,11 +165,17 @@ header {
 
 h1 {
   font-size: 5vh;
-  margin-bottom: 50px;
+  font-weight: 400;
   position: relative;
   z-index: 100;
+  margin: 0;
   margin-bottom: 10px;
   font-size: 8vw;
+
+  em {
+    font-weight: 300;
+    font-style: italic;
+  }
 
   @include small {
     width: 100%;
