@@ -78,7 +78,7 @@ export default {
      * @returns {Number}
      */
     randColor() {
-      let rand = this.messages_sent++
+      // let rand = this.messages_sent++
       return rand
     },
     getColour() {
@@ -102,6 +102,8 @@ export default {
       HomeServices.PostTweet(this.$axios, {
         'tweet': this.new_tweet.innerText })
         .then(res => {
+          console.log(res)
+          this.tweets.data.unshift(res.data)
           newTweet.message = ''
           this.new_tweet.innerText = ''
           this.addNewTweet = false
@@ -109,9 +111,9 @@ export default {
           this.status = false
           this.token = null
 
-          // this.$nextTick(() => {
-          //   this.bringMyTweets()
-          // });
+          this.$nextTick(() => {
+            this.bringMyTweets()
+          });
 
           this.new_tweet_success = true
           setTimeout(() => { this.new_tweet_success = false }, 3000)
@@ -224,6 +226,10 @@ export default {
           this.bringMyTweets()
         }
       }
+    },
+    pushNew (tweet) {
+      console.log(tweet)
+      this.tweets.data.unshift(tweet)
     },
     /**
      * Recaptcha by Google
